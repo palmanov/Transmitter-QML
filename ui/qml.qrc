@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>bottom_menu.qml</file>
+        <file>animated_rounded_button.qml</file>
     </qresource>
 </RCC>
