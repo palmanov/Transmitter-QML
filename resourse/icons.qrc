@@ -8,5 +8,10 @@
         <file>icons/bottom_menu/unknown.svg</file>
         <file>icons/status_bar/battery.svg</file>
         <file>icons/status_bar/signal.svg</file>
+        <file>icons/home_page/about.svg</file>
+        <file>icons/home_page/diagnostics.svg</file>
+        <file>icons/home_page/go_training.svg</file>
+        <file>icons/home_page/set_preset.svg</file>
+        <file>icons/home_page/setting.svg</file>
     </qresource>
 </RCC>

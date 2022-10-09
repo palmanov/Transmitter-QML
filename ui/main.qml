@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
+import QtQuick.Layouts 1.11
 
 Window {
   id: window
@@ -17,7 +18,7 @@ Window {
 
   Loader {
     id: bottomMenu
-    source: "bottom_menu.qml"
+    source: "qrc:/bottom_menu.qml"
     anchors.rightMargin: 0
     anchors.leftMargin: 0
     anchors.bottomMargin: 0
@@ -28,12 +29,27 @@ Window {
 
   Loader {
     id: statusBar
-    source: "status_bar.qml"
+    source: "qrc:/status_bar.qml"
     anchors.rightMargin: 16
     anchors.leftMargin: 16
     anchors.topMargin: 16
     anchors.left: parent.left
     anchors.right: parent.right
     anchors.top: parent.top
+  }
+
+  StackLayout {
+    currentIndex: 0
+
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    anchors.topMargin: 72
+    anchors.bottomMargin: 96
+
+    Loader {
+      source: "qrc:/pages/home_page.qml"
+    }
   }
 }
