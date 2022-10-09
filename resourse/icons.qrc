@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/bottom_menu/home.svg</file>
+        <file>icons/bottom_menu/bicycle.svg</file>
+        <file>icons/bottom_menu/bones.svg</file>
+        <file>icons/bottom_menu/settings.svg</file>
+        <file>icons/bottom_menu/training.svg</file>
+        <file>icons/bottom_menu/unknown.svg</file>
+    </qresource>
+</RCC>

@@ -3,14 +3,20 @@ import QtQuick.Window 2.15
 
 Window {
   id: window
-  width: 640
-  height: 480
+  width: 480
+  height: 800
   visible: true
-  title: qsTr("Hello World")
+  title: qsTr("Transmitter")
+
+  Rectangle {
+    opacity: 1.0
+    color: "#181818"
+    anchors.fill: parent
+  }
 
   Loader {
     id: roundButton
-    source: "qrc:/bottom_menu.qml"
+    source: "bottom_menu.qml"
     anchors.rightMargin: 0
     anchors.leftMargin: 0
     anchors.bottomMargin: 0
