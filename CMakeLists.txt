@@ -20,6 +20,7 @@ set(PROJECT_SOURCES
         src/main.cpp
         ui/qml.qrc
         resourse/icons.qrc
+        resourse/fonts.qrc
         ${TS_FILES}
 )
 

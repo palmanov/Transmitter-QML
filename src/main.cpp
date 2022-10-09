@@ -1,8 +1,13 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
+#include <QDir>
+#include <QFontDatabase>
 #include <QLocale>
 #include <QTranslator>
+
+bool loadFont(const QString &path);
+bool loadFonts();
 
 int main(int argc, char *argv[])
 {
@@ -10,6 +15,8 @@ int main(int argc, char *argv[])
   QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
   QGuiApplication app(argc, argv);
+
+  loadFonts();
 
   QTranslator translator;
   const QStringList uiLanguages = QLocale::system().uiLanguages();
@@ -31,4 +38,36 @@ int main(int argc, char *argv[])
   engine.load(url);
 
   return app.exec();
+}
+
+bool loadFonts() {
+  QDir fonts_dir(":/resource/fonts");
+  if (!fonts_dir.exists())
+    return false;
+
+  const QStringList name_filters = QStringList() << "*.ttf";
+  const auto info_list = fonts_dir.entryInfoList(name_filters, QDir::Files);
+
+  foreach (auto& file, info_list)
+    loadFont(file.filePath());
+
+  return true;
+}
+
+bool loadFont(const QString &path) {
+  bool fontWarningShown(false);
+  QFile res(path);
+  if (res.open(QIODevice::ReadOnly) == false) {
+    if (fontWarningShown == false) {
+        fontWarningShown = true;
+    }
+  } else {
+    int fontID(-1);
+    fontID = QFontDatabase::addApplicationFontFromData(res.readAll());
+    if (fontID == -1 && fontWarningShown == false) {
+      fontWarningShown = true;
+    }
+  }
+
+  return fontWarningShown;
 }

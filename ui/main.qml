@@ -11,11 +11,12 @@ Window {
   Rectangle {
     opacity: 1.0
     color: "#181818"
+//    color: "#FFFFFF"
     anchors.fill: parent
   }
 
   Loader {
-    id: roundButton
+    id: bottomMenu
     source: "bottom_menu.qml"
     anchors.rightMargin: 0
     anchors.leftMargin: 0
@@ -23,5 +24,16 @@ Window {
     anchors.left: parent.left
     anchors.right: parent.right
     anchors.bottom: parent.bottom
+  }
+
+  Loader {
+    id: statusBar
+    source: "status_bar.qml"
+    anchors.rightMargin: 16
+    anchors.leftMargin: 16
+    anchors.topMargin: 16
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
   }
 }

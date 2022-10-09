@@ -3,5 +3,7 @@
         <file>main.qml</file>
         <file>bottom_menu.qml</file>
         <file>animated_rounded_button.qml</file>
+        <file>pages/home_page.qml</file>
+        <file>status_bar.qml</file>
     </qresource>
 </RCC>

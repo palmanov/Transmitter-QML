@@ -6,5 +6,7 @@
         <file>icons/bottom_menu/settings.svg</file>
         <file>icons/bottom_menu/training.svg</file>
         <file>icons/bottom_menu/unknown.svg</file>
+        <file>icons/status_bar/battery.svg</file>
+        <file>icons/status_bar/signal.svg</file>
     </qresource>
 </RCC>
