@@ -37,8 +37,8 @@ Item {
 
     background: Rectangle {
       id: diagnosticsButtonBg
-      implicitWidth: diagnosticsButton.width
-      implicitHeight: diagnosticsButton.height
+      width: parent.width
+      height: parent.height
       opacity: 1.0
       color: "#121212"
       anchors.fill: parent
@@ -121,8 +121,8 @@ Item {
 
     background: Rectangle {
       id: goTrainingButtonBg
-      implicitWidth: goTrainingButton.width
-      implicitHeight: goTrainingButton.height
+      width: parent.width
+      height: parent.height
       opacity: 1.0
       color: "#121212"
       anchors.fill: parent
@@ -142,8 +142,8 @@ Item {
 
     background: Rectangle {
       id: settingButtonBg
-      implicitWidth: settingButton.width
-      implicitHeight: settingButton.height
+      width: parent.width
+      height: parent.height
       opacity: 1.0
       color: "#121212"
       anchors.fill: parent
@@ -169,7 +169,7 @@ Item {
         text: qsTr("Setting")
         anchors.left: parent.left
         anchors.right: parent.right
-        anchors.top: goTrainingIcon.bottom
+        anchors.top: settingButtonIcon.bottom
         anchors.bottom: parent.bottom
         font.pixelSize: 24
         lineHeight: 0.8
@@ -194,8 +194,8 @@ Item {
 
     background: Rectangle {
       id: setPresetButtonBg
-      implicitWidth: setPresetButton.width
-      implicitHeight: setPresetButton.height
+      width: parent.width
+      height: parent.height
       opacity: 1.0
       color: "#121212"
       anchors.fill: parent
@@ -244,8 +244,8 @@ Item {
 
     background: Rectangle {
       id: aboutButtonBg
-      implicitWidth: aboutButton.width
-      implicitHeight: aboutButton.height
+      width: parent.width
+      height: parent.height
       opacity: 1.0
       color: "#121212"
       anchors.fill: parent
