@@ -25,14 +25,142 @@ Item {
     font.family: "Rubik"
   }
 
+  Item {
+    id: statusItem
+    height: 32
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: timeText.bottom
+    anchors.rightMargin: 16
+    anchors.topMargin: 24
+    anchors.leftMargin: 16
+
+    Button {
+      id: statusButton
+      anchors.left: parent.left
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
+      anchors.topMargin: 0
+      anchors.leftMargin: 0
+      anchors.bottomMargin: 0
+      flat: true
+
+      contentItem: Item {
+        id: item1
+        Image {
+          id: connectionStatusIcon
+          width: 32
+          height: 32
+          anchors.verticalCenter: parent.verticalCenter
+          anchors.left: parent.left
+          source: "qrc:/icons/home_page/chain.svg"
+          anchors.leftMargin: 0
+          fillMode: Image.PreserveAspectFit
+        }
+
+        Text {
+          id: connectionStatusText
+          color: "#ffffff"
+          text: qsTr("Car is connected")
+          anchors.verticalCenter: parent.verticalCenter
+          anchors.left: connectionStatusIcon.right
+          anchors.right: parent.right
+          font.pixelSize: 16
+          anchors.rightMargin: 0
+          anchors.leftMargin: 12
+        }
+      }
+    }
+
+    Label {
+      id: statusDetailsLabel
+      color: "#97ec49"
+      text: "Details"
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.right: parent.right
+      font.pixelSize: 16
+      horizontalAlignment: Text.AlignRight
+      verticalAlignment: Text.AlignVCenter
+      font.styleName: "Bold"
+      font.weight: Font.Medium
+      font.bold: false
+      font.family: "Cantarell"
+      anchors.rightMargin: 0
+    }
+  }
+
+  Item {
+    id: wifiItem
+    height: 32
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: statusItem.bottom
+    anchors.rightMargin: 16
+    anchors.topMargin: 16
+    anchors.leftMargin: 16
+
+    Button {
+      id: wifiButton
+      anchors.left: parent.left
+      anchors.top: parent.top
+      anchors.bottom: parent.bottom
+      anchors.topMargin: 0
+      anchors.leftMargin: 0
+      anchors.bottomMargin: 0
+      flat: true
+
+      contentItem: Item {
+        id: wifiContentItem
+        Image {
+          id: wifiIcon
+          width: 32
+          height: 32
+          anchors.verticalCenter: parent.verticalCenter
+          anchors.left: parent.left
+          source: "qrc:/icons/home_page/wifi.svg"
+          anchors.leftMargin: 0
+          fillMode: Image.PreserveAspectFit
+        }
+
+        Text {
+          id: wifiText
+          color: "#ffffff"
+          text: qsTr("Wi-Fi is on")
+          anchors.verticalCenter: parent.verticalCenter
+          anchors.left: wifiIcon.right
+          anchors.right: parent.right
+          font.pixelSize: 16
+          anchors.rightMargin: 0
+          anchors.leftMargin: 12
+        }
+      }
+    }
+
+    Label {
+      id: wifiDetailsLabel
+      color: "#97ec49"
+      text: "Details"
+      anchors.verticalCenter: parent.verticalCenter
+      anchors.right: parent.right
+      font.pixelSize: 16
+      horizontalAlignment: Text.AlignRight
+      verticalAlignment: Text.AlignVCenter
+      font.styleName: "Bold"
+      font.weight: Font.Medium
+      font.bold: false
+      font.family: "Cantarell"
+      anchors.rightMargin: 0
+    }
+  }
+
   Button {
     id: diagnosticsButton
     width: 216
     height: 101
     anchors.left: parent.left
-    anchors.top: timeText.bottom
+    anchors.top: wifiItem.bottom
     anchors.leftMargin: 16
-    anchors.topMargin: 32
+    anchors.topMargin: 24
     flat: true
 
     background: Rectangle {
@@ -81,8 +209,8 @@ Item {
     text: qsTr("Go\ntraining")
     anchors.left: diagnosticsButton.right
     anchors.right: parent.right
-    anchors.top: timeText.bottom
-    anchors.topMargin: 32
+    anchors.top: wifiItem.bottom
+    anchors.topMargin: 24
     anchors.rightMargin: 16
     anchors.leftMargin: 16
     Layout.fillWidth: true
@@ -284,6 +412,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:800;width:480}D{i:17}
+    D{i:0;autoSize:true;height:800;width:480}
 }
 ##^##*/

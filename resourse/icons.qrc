@@ -13,5 +13,7 @@
         <file>icons/home_page/go_training.svg</file>
         <file>icons/home_page/set_preset.svg</file>
         <file>icons/home_page/setting.svg</file>
+        <file>icons/home_page/chain.svg</file>
+        <file>icons/home_page/wifi.svg</file>
     </qresource>
 </RCC>
