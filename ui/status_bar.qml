@@ -61,10 +61,10 @@ Item {
 
     font.pixelSize: 16
     verticalAlignment: Text.AlignVCenter
+    font.italic: true
+    font.weight: Font.Medium
     anchors.rightMargin: 4
     anchors.leftMargin: 4
-    font.italic: true
-    font.weight: Font.Black
     font.family: "Rubik"
 
     Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
