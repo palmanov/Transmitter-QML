@@ -7,6 +7,8 @@ Window {
   width: 480
   height: 800
   visible: true
+  minimumHeight: 800
+  minimumWidth: 480
   title: qsTr("Transmitter")
 
   Rectangle {

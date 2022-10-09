@@ -16,8 +16,8 @@ Item {
     font.pixelSize: 64
     horizontalAlignment: Text.AlignHCenter
     verticalAlignment: Text.AlignVCenter
-    anchors.rightMargin: 0
-    anchors.leftMargin: 0
+    anchors.rightMargin: 16
+    anchors.leftMargin: 16
     anchors.topMargin: 32
     font.weight: Font.Bold
     font.italic: false
@@ -96,7 +96,7 @@ Item {
     anchors.right: parent.right
     anchors.top: statusItem.bottom
     anchors.rightMargin: 16
-    anchors.topMargin: 16
+    anchors.topMargin: 12
     anchors.leftMargin: 16
 
     Button {
@@ -155,10 +155,11 @@ Item {
 
   Button {
     id: diagnosticsButton
-    width: 216
     height: 101
     anchors.left: parent.left
+    anchors.right: parent.horizontalCenter
     anchors.top: wifiItem.bottom
+    anchors.rightMargin: 8
     anchors.leftMargin: 16
     anchors.topMargin: 24
     flat: true
@@ -207,13 +208,12 @@ Item {
     id: goTrainingButton
     height: 218
     text: qsTr("Go\ntraining")
-    anchors.left: diagnosticsButton.right
+    anchors.left: parent.horizontalCenter
     anchors.right: parent.right
     anchors.top: wifiItem.bottom
     anchors.topMargin: 24
     anchors.rightMargin: 16
-    anchors.leftMargin: 16
-    Layout.fillWidth: true
+    anchors.leftMargin: 8
 
     contentItem: Item {
       Image {
@@ -241,7 +241,7 @@ Item {
         anchors.bottomMargin: 16
         anchors.rightMargin: 16
         anchors.leftMargin: 16
-        anchors.topMargin: 10
+        anchors.topMargin: 6
       }
     }
 
@@ -260,10 +260,11 @@ Item {
 
   Button {
     id: settingButton
-    width: 216
     height: 101
     anchors.left: parent.left
+    anchors.right: parent.horizontalCenter
     anchors.top: diagnosticsButton.bottom
+    anchors.rightMargin: 8
     anchors.leftMargin: 16
     anchors.topMargin: 16
     flat: true
@@ -300,11 +301,10 @@ Item {
         anchors.top: settingButtonIcon.bottom
         anchors.bottom: parent.bottom
         font.pixelSize: 24
-        lineHeight: 0.8
         anchors.bottomMargin: 16
         anchors.rightMargin: 16
         anchors.leftMargin: 16
-        anchors.topMargin: 10
+        anchors.topMargin: 6
       }
     }
   }
@@ -354,7 +354,7 @@ Item {
         lineHeight: 0.8
         anchors.rightMargin: 16
         anchors.leftMargin: 12
-        anchors.topMargin: 10
+        anchors.topMargin: 0
       }
     }
   }
@@ -404,7 +404,7 @@ Item {
         lineHeight: 0.8
         anchors.rightMargin: 16
         anchors.leftMargin: 12
-        anchors.topMargin: 10
+        anchors.topMargin: 0
       }
     }
   }
@@ -412,6 +412,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:800;width:480}
+    D{i:0;autoSize:true;height:800;width:480}D{i:14}D{i:19}D{i:24}
 }
 ##^##*/
