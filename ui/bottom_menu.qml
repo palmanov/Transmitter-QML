@@ -31,16 +31,16 @@ Item {
       width: 48
       height: 48
 
-      icon.height: 36
-      icon.width: 36
+      icon.height: 40
+      icon.width: 40
       icon.source: "qrc:/icons/bottom_menu/home.svg"
 
       Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 
       background: Rectangle {
         id: homeButtonBg
-        implicitWidth: homeButton.width
-        implicitHeight: homeButton.height
+        width: parent.width
+        height: parent.height
         opacity: 1.0
         color: "white"
         anchors.fill: parent
@@ -70,8 +70,8 @@ Item {
       width: 48
       height: 48
 
-      icon.height: 36
-      icon.width: 36
+      icon.height: 40
+      icon.width: 40
       icon.source: "qrc:/icons/bottom_menu/training.svg"
 
       Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
