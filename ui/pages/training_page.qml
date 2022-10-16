@@ -4,15 +4,14 @@ import QtQuick.Controls 2.15
 
 Item {
   id: trainingPage
-  scale: 1
 
   Item {
     id: raceControlItem
     height: 32
     anchors.left: parent.left
     anchors.right: parent.right
-    anchors.bottom: time_item.top
-    anchors.bottomMargin: 24
+    anchors.top: tabItem.bottom
+    anchors.topMargin: 8
     anchors.rightMargin: 16
     anchors.leftMargin: 16
 
@@ -75,10 +74,10 @@ Item {
     height: 456
     anchors.left: parent.left
     anchors.right: parent.right
-    anchors.bottom: parent.bottom
+    anchors.top: raceControlItem.bottom
     anchors.rightMargin: 0
     anchors.leftMargin: 0
-    anchors.bottomMargin: 0
+    anchors.topMargin: 16
 
     Image {
       id: image
@@ -196,7 +195,7 @@ Item {
 
   Item {
     id: tabItem
-    height: 200
+    height: 110
     anchors.left: parent.left
     anchors.right: parent.right
     anchors.top: parent.top
@@ -299,6 +298,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:800;width:480}D{i:18}D{i:17}D{i:26}D{i:16}
+    D{i:0;autoSize:true;height:800;width:480}D{i:1}
 }
 ##^##*/

@@ -21,12 +21,18 @@ Window {
   Loader {
     id: bottomMenu
     source: "qrc:/bottom_menu.qml"
+
     anchors.rightMargin: 0
     anchors.leftMargin: 0
     anchors.bottomMargin: 0
     anchors.left: parent.left
     anchors.right: parent.right
     anchors.bottom: parent.bottom
+  }
+
+  Connections {
+    target: bottomMenu.item
+    onMessage: stackWidget.currentIndex = msg
   }
 
   Loader {
@@ -41,7 +47,9 @@ Window {
   }
 
   StackLayout {
-    currentIndex: 1
+    id: stackWidget
+
+    currentIndex: 0
 
     anchors.rightMargin: 0
     anchors.leftMargin: 0

@@ -1,4 +1,5 @@
 import QtQuick 2.15
+import QtQuick.Controls 1.4
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.11
 
@@ -16,6 +17,8 @@ Item {
     anchors.fill: parent
   }
 
+  signal message(int msg)
+
   RowLayout {
     id: bottomMenuLayout
     anchors.verticalCenter: parent.verticalCenter
@@ -30,6 +33,10 @@ Item {
       id: homeButton
       width: 48
       height: 48
+
+      checkable: true
+      checked: true
+      autoExclusive: true
 
       icon.height: 40
       icon.width: 40
@@ -47,15 +54,17 @@ Item {
         radius: 16
       }
 
+      onClicked: bottomMenuItem.message(0)
+
       state: "active"
       states: [
         State {
-          name: "active"
+          name: "active"; when: homeButton.checked
           PropertyChanges { target: homeButtonBg; opacity: 1.0 }
           PropertyChanges { target: homeButton; icon.color: "#181818" }
         },
         State {
-          name: "noactive"
+          name: "noactive"; when: !homeButton.checked
           PropertyChanges { target: homeButtonBg; opacity: 0.0 }
           PropertyChanges { target: homeButton; icon.color: "#97EC49" }
         }
@@ -69,6 +78,9 @@ Item {
       id: trainingButton
       width: 48
       height: 48
+
+      checkable: true
+      autoExclusive: true
 
       icon.height: 40
       icon.width: 40
@@ -86,15 +98,17 @@ Item {
         radius: 16
       }
 
+      onClicked: bottomMenuItem.message(1)
+
       state: "noactive"
       states: [
         State {
-          name: "active"
+          name: "active"; when: trainingButton.checked
           PropertyChanges { target: trainingButtonBg; opacity: 1.0 }
           PropertyChanges { target: trainingButton; icon.color: "#181818" }
         },
         State {
-          name: "noactive"
+          name: "noactive"; when: !trainingButton.checked
           PropertyChanges { target: trainingButtonBg; opacity: 0.0 }
           PropertyChanges { target: trainingButton; icon.color: "#97EC49" }
         }
@@ -108,6 +122,9 @@ Item {
       id: unknownButton
       width: 48
       height: 48
+
+      checkable: true
+      autoExclusive: true
 
       icon.height: 36
       icon.width: 36
@@ -128,12 +145,12 @@ Item {
       state: "noactive"
       states: [
         State {
-          name: "active"
+          name: "active"; when: unknownButton.checked
           PropertyChanges { target: unknownButtonBg; opacity: 1.0 }
           PropertyChanges { target: unknownButton; icon.color: "#181818" }
         },
         State {
-          name: "noactive"
+          name: "noactive"; when: !unknownButton.checked
           PropertyChanges { target: unknownButtonBg; opacity: 0.0 }
           PropertyChanges { target: unknownButton; icon.color: "#97EC49" }
         }
@@ -147,6 +164,9 @@ Item {
       id: bonesButton
       width: 48
       height: 48
+
+      checkable: true
+      autoExclusive: true
 
       icon.height: 36
       icon.width: 36
@@ -167,12 +187,12 @@ Item {
       state: "noactive"
       states: [
         State {
-          name: "active"
+          name: "active"; when: bonesButton.checked
           PropertyChanges { target: bonesButtonBg; opacity: 1.0 }
           PropertyChanges { target: bonesButton; icon.color: "#181818" }
         },
         State {
-          name: "noactive"
+          name: "noactive"; when: !bonesButton.checked
           PropertyChanges { target: bonesButtonBg; opacity: 0.0 }
           PropertyChanges { target: bonesButton; icon.color: "#97EC49" }
         }
@@ -186,6 +206,9 @@ Item {
       id: bicycleButton
       width: 48
       height: 48
+
+      checkable: true
+      autoExclusive: true
 
       icon.height: 36
       icon.width: 36
@@ -206,12 +229,12 @@ Item {
       state: "noactive"
       states: [
         State {
-          name: "active"
+          name: "active"; when: bicycleButton.checked
           PropertyChanges { target: bicycleButtonBg; opacity: 1.0 }
           PropertyChanges { target: bicycleButton; icon.color: "#181818" }
         },
         State {
-          name: "noactive"
+          name: "noactive"; when: !bicycleButton.checked
           PropertyChanges { target: bicycleButtonBg; opacity: 0.0 }
           PropertyChanges { target: bicycleButton; icon.color: "#97EC49" }
         }
@@ -225,6 +248,9 @@ Item {
       id: settingsButton
       width: 48
       height: 48
+
+      checkable: true
+      autoExclusive: true
 
       icon.height: 36
       icon.width: 36
@@ -245,12 +271,12 @@ Item {
       state: "noactive"
       states: [
         State {
-          name: "active"
+          name: "active"; when: settingsButton.checked
           PropertyChanges { target: settingsButtonBg; opacity: 1.0 }
           PropertyChanges { target: settingsButton; icon.color: "#181818" }
         },
         State {
-          name: "noactive"
+          name: "noactive"; when: !settingsButton.checked
           PropertyChanges { target: settingsButtonBg; opacity: 0.0 }
           PropertyChanges { target: settingsButton; icon.color: "#97EC49" }
         }
