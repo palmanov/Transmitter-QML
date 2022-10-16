@@ -41,8 +41,10 @@ Window {
   }
 
   StackLayout {
-    currentIndex: 0
+    currentIndex: 1
 
+    anchors.rightMargin: 0
+    anchors.leftMargin: 0
     anchors.left: parent.left
     anchors.right: parent.right
     anchors.top: parent.top
@@ -52,6 +54,14 @@ Window {
 
     Loader {
       source: "qrc:/pages/home_page.qml"
+    }
+
+    Loader {
+      source: "qrc:/pages/training_page.qml"
+      anchors.rightMargin: 24
+      anchors.leftMargin: 24
+      anchors.left: parent.left
+      anchors.right: parent.right
     }
   }
 }

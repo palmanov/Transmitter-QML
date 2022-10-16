@@ -412,6 +412,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:800;width:480}D{i:14}D{i:19}D{i:24}
+    D{i:0;autoSize:true;height:800;width:480}
 }
 ##^##*/

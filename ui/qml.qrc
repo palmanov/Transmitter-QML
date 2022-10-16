@@ -5,5 +5,6 @@
         <file>animated_rounded_button.qml</file>
         <file>pages/home_page.qml</file>
         <file>status_bar.qml</file>
+        <file>pages/training_page.qml</file>
     </qresource>
 </RCC>

@@ -84,7 +84,7 @@ Item {
     icon.height: parent.height
     icon.width: parent.height
     icon.source: "qrc:/icons/status_bar/signal.svg"
-    icon.color: "#97EC49"
+    icon.color: "#339E01"
 
     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
   }
@@ -103,7 +103,7 @@ Item {
     icon.height: parent.height
     icon.width: parent.height
     icon.source: "qrc:/icons/status_bar/battery.svg"
-    icon.color: "#97EC49"
+    icon.color: "#339E01"
 
     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
   }
