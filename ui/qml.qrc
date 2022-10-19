@@ -6,5 +6,9 @@
         <file>pages/home_page.qml</file>
         <file>status_bar.qml</file>
         <file>pages/training_page.qml</file>
+        <file>pages/settings_page.qml</file>
+        <file>pages/unknown_page.qml</file>
+        <file>pages/bones_page.qml</file>
+        <file>pages/bycicle_page.qml</file>
     </qresource>
 </RCC>

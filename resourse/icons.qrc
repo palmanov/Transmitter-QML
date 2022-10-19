@@ -18,5 +18,6 @@
         <file>icons/training_page/training_page_bg.svg</file>
         <file>icons/training_page/next_history.svg</file>
         <file>icons/training_page/prev_history.svg</file>
+        <file>icons/settings_page/graph.png</file>
     </qresource>
 </RCC>

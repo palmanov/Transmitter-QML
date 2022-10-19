@@ -170,6 +170,8 @@ Item {
         radius: 16
       }
 
+      onClicked: bottomMenuItem.message(2)
+
       state: "noactive"
       states: [
         State {
@@ -211,6 +213,8 @@ Item {
         anchors.fill: parent
         radius: 16
       }
+
+      onClicked: bottomMenuItem.message(3)
 
       state: "noactive"
       states: [
@@ -254,6 +258,8 @@ Item {
         radius: 16
       }
 
+      onClicked: bottomMenuItem.message(4)
+
       state: "noactive"
       states: [
         State {
@@ -295,6 +301,8 @@ Item {
         anchors.fill: parent
         radius: 16
       }
+
+      onClicked: bottomMenuItem.message(5)
 
       state: "noactive"
       states: [

@@ -40,6 +40,26 @@ Window {
       id: trainingPage
       source: "qrc:/pages/training_page.qml"
     }
+
+    Loader {
+      id: unknownPage
+      source: "qrc:/pages/unknown_page.qml"
+    }
+
+    Loader {
+      id: bonesPage
+      source: "qrc:/pages/bones_page.qml"
+    }
+
+    Loader {
+      id: byciclePage
+      source: "qrc:/pages/bycicle_page.qml"
+    }
+
+    Loader {
+      id: settingsPage
+      source: "qrc:/pages/settings_page.qml"
+    }
   }
 
   Loader {
