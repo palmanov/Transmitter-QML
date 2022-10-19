@@ -16,5 +16,7 @@
         <file>icons/home_page/chain.svg</file>
         <file>icons/home_page/wifi.svg</file>
         <file>icons/training_page/training_page_bg.svg</file>
+        <file>icons/training_page/next_history.svg</file>
+        <file>icons/training_page/prev_history.svg</file>
     </qresource>
 </RCC>

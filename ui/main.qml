@@ -14,8 +14,32 @@ Window {
   Rectangle {
     opacity: 1.0
     color: "#181818"
-//    color: "#FFFFFF"
     anchors.fill: parent
+  }
+
+  StackLayout {
+    id: stackWidget
+
+    currentIndex: 0
+
+    anchors.rightMargin: 0
+    anchors.leftMargin: 0
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    anchors.topMargin: 72
+    anchors.bottomMargin: 0
+
+    Loader {
+      id: homePage
+      source: "qrc:/pages/home_page.qml"
+    }
+
+    Loader {
+      id: trainingPage
+      source: "qrc:/pages/training_page.qml"
+    }
   }
 
   Loader {
@@ -32,7 +56,26 @@ Window {
 
   Connections {
     target: bottomMenu.item
-    onMessage: stackWidget.currentIndex = msg
+    function onMessage(msg) {
+      stackWidget.currentIndex = msg
+      bottomMenu.item.currentPageIndex = msg
+    }
+  }
+
+  Connections {
+    target: homePage.item
+    function onTransitionToTraining() {
+      stackWidget.currentIndex = 1
+      bottomMenu.item.currentPageIndex = 1
+    }
+  }
+
+  Connections {
+    target: homePage.item
+    function onTransitionToSettings() {
+      stackWidget.currentIndex = 5
+      bottomMenu.item.currentPageIndex = 5
+    }
   }
 
   Loader {
@@ -44,32 +87,5 @@ Window {
     anchors.left: parent.left
     anchors.right: parent.right
     anchors.top: parent.top
-  }
-
-  StackLayout {
-    id: stackWidget
-
-    currentIndex: 0
-
-    anchors.rightMargin: 0
-    anchors.leftMargin: 0
-    anchors.left: parent.left
-    anchors.right: parent.right
-    anchors.top: parent.top
-    anchors.bottom: parent.bottom
-    anchors.topMargin: 72
-    anchors.bottomMargin: 96
-
-    Loader {
-      source: "qrc:/pages/home_page.qml"
-    }
-
-    Loader {
-      source: "qrc:/pages/training_page.qml"
-      anchors.rightMargin: 24
-      anchors.leftMargin: 24
-      anchors.left: parent.left
-      anchors.right: parent.right
-    }
   }
 }

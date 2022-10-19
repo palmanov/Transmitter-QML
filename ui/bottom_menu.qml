@@ -8,6 +8,8 @@ Item {
   width: 480
   height: 80
 
+  property int currentPageIndex
+
   // Background
   Rectangle {
     id: bottomMenuBg
@@ -18,6 +20,32 @@ Item {
   }
 
   signal message(int msg)
+
+  Connections {
+    target: bottomMenuItem
+    function onCurrentPageIndexChanged() {
+      switch (currentPageIndex) {
+      case 0:
+        homeButton.checked = true
+        break
+      case 1:
+        trainingButton.checked = true
+        break
+      case 2:
+        unknownButton.checked = true
+        break
+      case 3:
+        bonesButton.checked = true
+        break
+      case 4:
+        bicycleButton.checked = true
+        break
+      case 5:
+        settingsButton.checked = true
+        break
+      }
+    }
+  }
 
   RowLayout {
     id: bottomMenuLayout

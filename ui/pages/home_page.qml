@@ -5,6 +5,9 @@ import QtQuick.Controls 2.15
 Item {
   id: homePage
 
+  signal transitionToTraining()
+  signal transitionToSettings()
+
   Text {
     id: timeText
     height: 77
@@ -215,6 +218,10 @@ Item {
     anchors.rightMargin: 16
     anchors.leftMargin: 8
 
+    onClicked: {
+      homePage.transitionToTraining()
+    }
+
     contentItem: Item {
       Image {
         id: goTrainingIcon
@@ -268,6 +275,8 @@ Item {
     anchors.leftMargin: 16
     anchors.topMargin: 16
     flat: true
+
+    onClicked: homePage.transitionToSettings()
 
     background: Rectangle {
       id: settingButtonBg
