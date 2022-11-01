@@ -1,6 +1,6 @@
 # Transmitter-QML
 
-[YouTube](https://www.youtube.com/shorts/C5tJmzySTdk)
+[YouTube](https://youtu.be/VcN3oiH8ezc)
 
 ![alt text](home_preview.png "Home Page")
 ![alt text](training_preview.png "Training Page")
